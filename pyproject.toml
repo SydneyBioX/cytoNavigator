@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "proteonavigator-lite"
+name = "cytonavigator"
 version = "0.1.0"
 description = "A local-first LLM agent for cytoGater cell annotation workflows."
 readme = "README.md"
@@ -28,7 +28,7 @@ dependencies = [
 dev = ["pytest>=8", "ruff>=0.6"]
 
 [project.scripts]
-proteonavigator-lite = "proteonavigator_lite.cli:main"
+cytonavigator = "cytonavigator.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

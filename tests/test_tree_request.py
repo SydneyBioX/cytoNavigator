@@ -1,4 +1,4 @@
-from proteonavigator_lite.services import requested_tree_cell_type
+from cytonavigator.services import requested_tree_cell_type
 
 
 def test_resolves_cell_type_from_natural_tree_plot_request():

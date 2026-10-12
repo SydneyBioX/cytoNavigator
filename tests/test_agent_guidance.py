@@ -1,4 +1,8 @@
-from proteonavigator_lite.agent import SYSTEM_PROMPT
+from cytonavigator.agent import SYSTEM_PROMPT
+
+
+def test_agent_identifies_as_cytonavigator():
+    assert SYSTEM_PROMPT.startswith("You are CytoNavigator,")
 
 
 def test_onboarding_guides_instead_of_only_listing_stage_names():

@@ -1,5 +1,5 @@
-from proteonavigator_lite.knowledge import describe_options, inspect_public_api
-from proteonavigator_lite.services import STAGE_DEFAULTS
+from cytonavigator.knowledge import describe_options, inspect_public_api
+from cytonavigator.services import STAGE_DEFAULTS
 
 
 def test_cutoff_method_options_are_explicit():

@@ -18,7 +18,7 @@ from .knowledge import describe_options, inspect_public_api, list_public_api
 from .services import STAGE_DEFAULTS, WorkspaceService
 
 
-SYSTEM_PROMPT = """You are ProteoNavigator Lite, a careful spatial-proteomics cell-annotation
+SYSTEM_PROMPT = """You are CytoNavigator, a careful spatial-proteomics cell-annotation
 assistant using the cytoGater Python package.
 
 Scientific rules:

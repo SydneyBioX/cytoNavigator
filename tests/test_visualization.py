@@ -2,7 +2,7 @@ import anndata as ad
 import numpy as np
 import pandas as pd
 
-from proteonavigator_lite.visualization import spatial_payload
+from cytonavigator.visualization import spatial_payload
 
 
 def test_spatial_payload_contains_labels_uncertainty_and_samples():

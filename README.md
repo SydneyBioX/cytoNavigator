@@ -1,6 +1,6 @@
-# ProteoNavigator Lite
+# CytoNavigator
 
-ProteoNavigator Lite is a local-first Chainlit agent for building, reviewing,
+CytoNavigator is a local-first Chainlit agent for building, reviewing,
 and executing cell-annotation workflows with the Python `cytogater` package.
 
 ## Current capabilities
@@ -33,12 +33,12 @@ labels and predicts only cells left `Unassigned`.
 
 ## Installation
 
-ProteoNavigator Lite requires Python 3.10 or later. Clone the repository, enter
+CytoNavigator requires Python 3.10 or later. Clone the repository, enter
 the project directory, and create a virtual environment:
 
 ```bash
-git clone https://github.com/SydneyBioX/ProteoNavigator-lite.git
-cd ProteoNavigator-lite
+git clone https://github.com/SydneyBioX/CytoNavigator.git
+cd CytoNavigator
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -47,13 +47,13 @@ python -m pip install -e .
 ```
 
 The `cytogater` package is installed from PyPI. To also install the development
-tools for ProteoNavigator Lite, use:
+tools for CytoNavigator, use:
 
 ```bash
 python -m pip install -e '.[dev]'
 ```
 
-All cytoGater calls are isolated in `src/proteonavigator_lite/backend.py`, so an
+All cytoGater calls are isolated in `src/cytonavigator/backend.py`, so an
 API change requires one adapter update rather than changes to prompts and tools.
 
 ## Quick start: run the agent
@@ -81,7 +81,7 @@ Open `http://localhost:8000` in a browser. The first screen asks you to:
 On later runs, enter the cloned project directory and reactivate its environment:
 
 ```bash
-cd ProteoNavigator-lite
+cd CytoNavigator
 source .venv/bin/activate
 DEBUG=false chainlit run app.py --host 127.0.0.1 --port 8000
 ```
@@ -104,7 +104,7 @@ ssh -L 8000:127.0.0.1:8000 YOUR_USERNAME@YOUR_CLUSTER_HOST
 Inside that SSH session, run:
 
 ```bash
-cd ProteoNavigator-lite
+cd CytoNavigator
 source .venv/bin/activate
 DEBUG=false chainlit run app.py --host 127.0.0.1 --port 8000
 ```
@@ -254,4 +254,4 @@ either per-class probability quantiles or MAD cutoffs. Its `cutoff_label` result
 and shown in the spatial viewer before a later RF, kNN, hierarchy, or neural-network
 continuation. Tree-gating models are saved as JSON; after a tree run, ask the agent to
 list available tree cell types or render one (for example, "show the Tumor tree plot").
-# ProteoNavigator-lite
+# CytoNavigator

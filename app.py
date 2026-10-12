@@ -1,4 +1,4 @@
-"""Chainlit interface for ProteoNavigator Lite."""
+"""Chainlit interface for CytoNavigator."""
 
 from __future__ import annotations
 
@@ -19,10 +19,10 @@ import chainlit as cl
 import pandas as pd
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
 
-from proteonavigator_lite.agent import build_agent
-from proteonavigator_lite.models import SessionWorkspace
-from proteonavigator_lite.services import WorkspaceService, requested_tree_cell_type
-from proteonavigator_lite.visualization import spatial_payload
+from cytonavigator.agent import build_agent
+from cytonavigator.models import SessionWorkspace
+from cytonavigator.services import WorkspaceService, requested_tree_cell_type
+from cytonavigator.visualization import spatial_payload
 
 
 ROOT = Path(__file__).resolve().parent
@@ -236,7 +236,7 @@ async def on_chat_start():
     cl.user_session.set("model_label", f"{settings['provider']}/{settings['model']}")
     _save_conversation_event(
         "system",
-        "ProteoNavigator Lite session started.",
+        "CytoNavigator session started.",
         session_id=session_id,
         model=f"{settings['provider']}/{settings['model']}",
     )
@@ -354,7 +354,7 @@ async def on_message(message: cl.Message):
     plans_before = set(service.workspace.plans)
 
     try:
-        with cl.Step(name="ProteoNavigator agent", type="llm") as step:
+        with cl.Step(name="CytoNavigator agent", type="llm") as step:
             result = await graph.ainvoke({"messages": history}, {"recursion_limit": 20})
             final = result["messages"][-1]
             answer = _text(final.content)
@@ -455,7 +455,7 @@ async def approve_plan(action: cl.Action):
     process = context.Process(
         target=_run_plan_worker,
         args=(service, plan_id, result_queue),
-        name=f"proteonavigator-{plan_id}",
+        name=f"cytonavigator-{plan_id}",
     )
     run = {
         "process": process,

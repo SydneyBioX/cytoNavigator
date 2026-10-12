@@ -5,13 +5,13 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from proteonavigator_lite.data import (
+from cytonavigator.data import (
     load_dataset,
     load_lineage_table,
     validate_lineage,
 )
-from proteonavigator_lite.models import DatasetRecord, SessionWorkspace
-from proteonavigator_lite.services import WorkspaceService
+from cytonavigator.models import DatasetRecord, SessionWorkspace
+from cytonavigator.services import WorkspaceService
 
 
 def test_load_expression_csv_creates_exprs_layer(tmp_path: Path):

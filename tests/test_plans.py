@@ -1,7 +1,7 @@
 import pytest
 
-from proteonavigator_lite.models import PipelineStage
-from proteonavigator_lite.services import (
+from cytonavigator.models import PipelineStage
+from cytonavigator.services import (
     STAGE_DEFAULTS,
     _validate_parameter_choices,
     _validate_prediction_models,

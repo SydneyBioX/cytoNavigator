@@ -6,12 +6,12 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from proteonavigator_lite.backend import (
+from cytonavigator.backend import (
     CytoGaterBackend,
     _prepare_prediction_targets,
     _prepare_training_labels,
 )
-from proteonavigator_lite.models import AnnotationPlan, PipelineStage
+from cytonavigator.models import AnnotationPlan, PipelineStage
 
 
 def _toy_data(n_per_class=100):

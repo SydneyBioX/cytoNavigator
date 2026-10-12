@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
 
-from proteonavigator_lite.models import SessionWorkspace
-from proteonavigator_lite.services import WorkspaceService
+from cytonavigator.models import SessionWorkspace
+from cytonavigator.services import WorkspaceService
 
 
 def test_service_renders_selected_tree_plot(tmp_path: Path):
