@@ -1,6 +1,6 @@
-# CytoNavigator
+# cytoNavigator
 
-CytoNavigator is a local-first Chainlit agent for building, reviewing,
+cytoNavigator is a local-first Chainlit agent for building, reviewing,
 and executing cell-annotation workflows with the Python `cytogater` package.
 
 ## Current capabilities
@@ -33,12 +33,12 @@ labels and predicts only cells left `Unassigned`.
 
 ## Installation
 
-CytoNavigator requires Python 3.10 or later. Clone the repository, enter
+cytoNavigator requires Python 3.10 or later. Clone the repository, enter
 the project directory, and create a virtual environment:
 
 ```bash
-git clone https://github.com/SydneyBioX/CytoNavigator.git
-cd CytoNavigator
+git clone https://github.com/SydneyBioX/cytoNavigator.git
+cd cytoNavigator
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -47,7 +47,7 @@ python -m pip install -e .
 ```
 
 The `cytogater` package is installed from PyPI. To also install the development
-tools for CytoNavigator, use:
+tools for cytoNavigator, use:
 
 ```bash
 python -m pip install -e '.[dev]'
@@ -81,7 +81,7 @@ Open `http://localhost:8000` in a browser. The first screen asks you to:
 On later runs, enter the cloned project directory and reactivate its environment:
 
 ```bash
-cd CytoNavigator
+cd cytoNavigator
 source .venv/bin/activate
 DEBUG=false chainlit run app.py --host 127.0.0.1 --port 8000
 ```
@@ -104,7 +104,7 @@ ssh -L 8000:127.0.0.1:8000 YOUR_USERNAME@YOUR_CLUSTER_HOST
 Inside that SSH session, run:
 
 ```bash
-cd CytoNavigator
+cd cytoNavigator
 source .venv/bin/activate
 DEBUG=false chainlit run app.py --host 127.0.0.1 --port 8000
 ```
@@ -254,4 +254,4 @@ either per-class probability quantiles or MAD cutoffs. Its `cutoff_label` result
 and shown in the spatial viewer before a later RF, kNN, hierarchy, or neural-network
 continuation. Tree-gating models are saved as JSON; after a tree run, ask the agent to
 list available tree cell types or render one (for example, "show the Tumor tree plot").
-# CytoNavigator
+# cytoNavigator

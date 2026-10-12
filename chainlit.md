@@ -1,4 +1,4 @@
-# CytoNavigator
+# cytoNavigator
 
 A local-first LLM agent for building, reviewing, and running cell-annotation
 workflows with the Python **cytoGater** package.

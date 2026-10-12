@@ -1,4 +1,4 @@
-"""Chainlit interface for CytoNavigator."""
+"""Chainlit interface for cytoNavigator."""
 
 from __future__ import annotations
 
@@ -236,7 +236,7 @@ async def on_chat_start():
     cl.user_session.set("model_label", f"{settings['provider']}/{settings['model']}")
     _save_conversation_event(
         "system",
-        "CytoNavigator session started.",
+        "cytoNavigator session started.",
         session_id=session_id,
         model=f"{settings['provider']}/{settings['model']}",
     )
@@ -354,7 +354,7 @@ async def on_message(message: cl.Message):
     plans_before = set(service.workspace.plans)
 
     try:
-        with cl.Step(name="CytoNavigator agent", type="llm") as step:
+        with cl.Step(name="cytoNavigator agent", type="llm") as step:
             result = await graph.ainvoke({"messages": history}, {"recursion_limit": 20})
             final = result["messages"][-1]
             answer = _text(final.content)
