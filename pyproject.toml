@@ -30,6 +30,13 @@ dev = ["pytest>=8", "ruff>=0.6"]
 [project.scripts]
 cytonavigator = "cytonavigator.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/SydneyBioX/cytoNavigator"
+Repository = "https://github.com/SydneyBioX/cytoNavigator"
+Issues = "https://github.com/SydneyBioX/cytoNavigator/issues"
+"Python package" = "https://github.com/SydneyBioX/cytoGateR-py"
+"R package" = "https://github.com/SydneyBioX/cytoGateR"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
