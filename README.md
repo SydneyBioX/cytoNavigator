@@ -1,7 +1,8 @@
 # cytoNavigator
 
-cytoNavigator is a local-first Chainlit agent for building, reviewing,
-and executing cell-annotation workflows with the Python `cytogater` package.
+cytoNavigator is a local-first, LLM-supported Chainlit agent for building,
+reviewing, and executing cell-annotation workflows with the Python `cytogater`
+package.
 
 ## cytoGateR ecosystem
 
@@ -11,7 +12,7 @@ and executing cell-annotation workflows with the Python `cytogater` package.
   implementation used by cytoNavigator, also available from
   [PyPI](https://pypi.org/project/cytogater/);
 - [`cytoNavigator`](https://github.com/SydneyBioX/cytoNavigator) — this
-  local-first conversational interface.
+  local-first, LLM-supported annotation agent.
 
 ## Current capabilities
 
